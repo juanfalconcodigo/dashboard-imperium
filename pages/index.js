@@ -9,7 +9,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <p>Amiguito mira estos recursos para el manipular el estado con React:</p>
+      <p>
+        Amiguito mira estos recursos para manipular el estado en React sin
+        REDUX:
+      </p>
       <ul>
         <li>
           <a href="https://medium.com/@leomedina.dev/react-administrar-el-estado-de-tu-app-bb560623fc55">
