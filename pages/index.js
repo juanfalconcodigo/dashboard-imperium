@@ -1,10 +1,10 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import React from 'react';
+import LoginContainer from '../src/components/Login';
 
-export default function Register() {
+export default function Login() {
   return (
   <>
-  <p>Register</p>
+  <LoginContainer/>
   </>
   );
 }
