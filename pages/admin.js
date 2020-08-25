@@ -1,8 +1,8 @@
 import React from "react";
 import {LayoutAdmin} from "../src/Layouts";
+import { ProtectRoute } from "../src/hoc";
 
-
-export default function Admin() {
+function Admin() {
   
   return (
     <>
@@ -12,3 +12,6 @@ export default function Admin() {
     </>
   );
 }
+
+
+export default ProtectRoute(Admin);

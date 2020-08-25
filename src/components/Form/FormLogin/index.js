@@ -3,13 +3,16 @@ import { Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { FormComponent } from "./Styled";
 import { useRouter } from "next/router";
+import {useAuth} from '../../../hooks';
+
 
 export default function FormLoginComponent() {
   const router = useRouter();
-
-  const onFinish = (values) => {
-    console.log("Success:", values);
-    router.push("/admin");
+  const { login } = useAuth();
+  const onFinish = async(values) => {
+    const{email,password}=values;
+    const resp=await login(email,password);
+    resp?router.push('/admin'):console.log(false);
   };
   return (
     <>

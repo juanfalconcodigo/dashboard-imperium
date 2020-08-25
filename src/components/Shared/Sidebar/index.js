@@ -7,10 +7,13 @@ import {
   LogoutOutlined,
 } from "@ant-design/icons";
 import { ItemListMenu } from "./Styled";
+import { useAuth } from "../../../hooks";
 const { Sider } = Layout;
 
 
 export default function SidebarComponent({ collapsed }) {
+  const { logout } = useAuth();
+  
   return (
     <>
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -22,7 +25,7 @@ export default function SidebarComponent({ collapsed }) {
           <ItemListMenu key="2" icon={<UsergroupAddOutlined />}>
           <Link href="/client"><a>Clients</a></Link>
           </ItemListMenu>
-          <ItemListMenu key="3" icon={<LogoutOutlined />}>
+          <ItemListMenu key="3" icon={<LogoutOutlined />} onClick={()=>logout()}>
             Close
           </ItemListMenu>
         </Menu>

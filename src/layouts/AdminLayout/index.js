@@ -1,9 +1,12 @@
 import React from "react";
 import Head from "next/head";
 import AdminContainer from "../../components/Admin/index.";
+import { useAuth } from "../../hooks";
 
 export default function LayoutAdmin({ children }) {
 
+  const { isAuthenticated} = useAuth();
+  if(!isAuthenticated)return null;
   return (
     <>
       <Head>

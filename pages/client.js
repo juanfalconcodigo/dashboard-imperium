@@ -1,7 +1,8 @@
 import React from 'react';
 import { LayoutAdmin } from '../src/Layouts';
+import { ProtectRoute } from '../src/hoc/privateRouter';
 
-export default function ClientContainer() {
+function Client() {
     return (
         <>
         <LayoutAdmin>
@@ -10,3 +11,5 @@ export default function ClientContainer() {
         </>
     )
 }
+
+export default ProtectRoute(Client);
