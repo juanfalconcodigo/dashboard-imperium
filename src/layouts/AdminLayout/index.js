@@ -6,7 +6,8 @@ import { useAuth } from "../../hooks";
 export default function LayoutAdmin({ children }) {
 
   const { isAuthenticated} = useAuth();
-  if(!isAuthenticated)return null;
+  //si no esta autenticado no retorna nada
+  if(!isAuthenticated)return  null;
   return (
     <>
       <Head>
