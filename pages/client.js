@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutAdmin } from '../src/Layouts';
+import { LayoutAdmin } from '../src/layouts';
 import { ProtectRoute } from '../src/hoc/privateRouter';
 
 function Client() {
